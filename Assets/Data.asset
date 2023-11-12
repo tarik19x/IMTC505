@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 064957ea01d60004facde86cef4bbefc, type: 3}
+  m_Name: Data
+  m_EditorClassIdentifier: 
+  identifier: Data
+  buildKey: 20178ef9f4438714492a777ce3ecd9ba
+  groupID: 852efd43-2986-455e-854e-372e71306677
+  boundingBoxWithHandlesPrefab: {fileID: 5671351296789090341, guid: 7b542306e34a62f4c9a822fcb19b7d99,
+    type: 3}
+  stateChanged: 0
+  placables:
+  - identifier: TestingModel
+    prefab: {fileID: 3719123263089569034, guid: 47ac7afb4a9da1c44a474b0e381b6e48,
+      type: 3}
+  - identifier: Treasure
+    prefab: {fileID: 522517120412427331, guid: 44c86d20a9cef3146931bf7ddf9bc729, type: 3}
