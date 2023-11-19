@@ -24,3 +24,9 @@ MonoBehaviour:
       type: 3}
   - identifier: Treasure
     prefab: {fileID: 522517120412427331, guid: 44c86d20a9cef3146931bf7ddf9bc729, type: 3}
+  - identifier: UBCO_Hisotry
+    prefab: {fileID: 8533864159308976107, guid: 84c7454a1ffacd144bca5e10b471b5ed,
+      type: 3}
+  - identifier: Okanagan Lake
+    prefab: {fileID: 2671575864547158182, guid: 4050deaa11cbf9245953ba19254e2c6a,
+      type: 3}
