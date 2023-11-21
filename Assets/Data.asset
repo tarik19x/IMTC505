@@ -30,3 +30,6 @@ MonoBehaviour:
   - identifier: Okanagan Lake
     prefab: {fileID: 2671575864547158182, guid: 4050deaa11cbf9245953ba19254e2c6a,
       type: 3}
+  - identifier: 3D Animated Box
+    prefab: {fileID: 3732884140816335134, guid: b9c23760161b7cc459510c2cf914d719,
+      type: 3}
