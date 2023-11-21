@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   identifier: SampleData
   buildKey: b10936b52578156469ea4ba51032a93b
-  groupID: 
+  groupID: 852efd43-2986-455e-854e-372e71306677
   boundingBoxWithHandlesPrefab: {fileID: 5671351296789090341, guid: 7b542306e34a62f4c9a822fcb19b7d99,
     type: 3}
-  stateChanged: 0
+  stateChanged: 1
   placables:
   - identifier: Lander
     prefab: {fileID: 100018, guid: f9a8072f5d9b92347a999f10f01b8012, type: 3}
