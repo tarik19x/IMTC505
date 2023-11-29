@@ -215,6 +215,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Slate
       objectReference: {fileID: 0}
+    - target: {fileID: 2790149175973773238, guid: 2c4cecf25adbc2f4c88bc2752a9c3264,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4c1a37a812b453746be18b93ca405a0f, type: 2}
     - target: {fileID: 4557506528664156442, guid: 2c4cecf25adbc2f4c88bc2752a9c3264,
         type: 3}
       propertyPath: m_LocalScale.x
