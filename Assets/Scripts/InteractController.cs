@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using MixedReality.Toolkit;
@@ -9,7 +8,6 @@ public class InteractController : MonoBehaviour
 {
     // Start is called before the first frame update
     private StatefulInteractable interactable;
-    public Animator anim;
 
     void Start()
     {
@@ -18,26 +16,15 @@ public class InteractController : MonoBehaviour
         {
             interactable = gameObject.AddComponent<StatefulInteractable>();
         }
-        // interactable.OnClicked.AddListener(OnClickCallback);
-        //
-        // gameObject.AddComponent<UGUIInputAdapter>();
+        interactable.OnClicked.AddListener(OnClickCallback);
+        
+        gameObject.AddComponent<UGUIInputAdapter>();
     }
 
-    private void Update()
+    public void OnClickCallback()
     {
-        
-            if (interactable.IsGrabHovered)
-            {
-                anim.SetTrigger("Open");
-            }
-            else
-            {
-                Debug.Log("Object is not being poked or hovered over");
-            }
-        
+       Debug.Log("debugging"); 
     }
-
-   
     
 
 
