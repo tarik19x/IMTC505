@@ -23,7 +23,7 @@ public class InteractController : MonoBehaviour
 
     public void OnClickCallback()
     {
-        Debug.Log($">>>>>>>>>>>>>>>>>>>>  clicked");
+       Debug.Log("debugging"); 
     }
     
 

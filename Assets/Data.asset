@@ -33,3 +33,6 @@ MonoBehaviour:
   - identifier: 3D Animated Box
     prefab: {fileID: 3732884140816335134, guid: b9c23760161b7cc459510c2cf914d719,
       type: 3}
+  - identifier: marker3
+    prefab: {fileID: 2293340660556301484, guid: 9cea21ca05b698d4aabfa7159ef8c036,
+      type: 3}
