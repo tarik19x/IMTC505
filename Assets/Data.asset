@@ -19,20 +19,12 @@ MonoBehaviour:
     type: 3}
   stateChanged: 0
   placables:
-  - identifier: TestingModel
-    prefab: {fileID: 3719123263089569034, guid: 47ac7afb4a9da1c44a474b0e381b6e48,
-      type: 3}
-  - identifier: Treasure
-    prefab: {fileID: 522517120412427331, guid: 44c86d20a9cef3146931bf7ddf9bc729, type: 3}
-  - identifier: UBCO_Hisotry
-    prefab: {fileID: 8533864159308976107, guid: 84c7454a1ffacd144bca5e10b471b5ed,
-      type: 3}
   - identifier: Okanagan Lake
     prefab: {fileID: 2671575864547158182, guid: 4050deaa11cbf9245953ba19254e2c6a,
       type: 3}
   - identifier: 3D Animated Box
     prefab: {fileID: 3732884140816335134, guid: b9c23760161b7cc459510c2cf914d719,
       type: 3}
-  - identifier: marker3
-    prefab: {fileID: 2293340660556301484, guid: 9cea21ca05b698d4aabfa7159ef8c036,
+  - identifier: Coverflow
+    prefab: {fileID: 4887613191576630858, guid: 3110124597785b94e8090a5e2d29cf8e,
       type: 3}

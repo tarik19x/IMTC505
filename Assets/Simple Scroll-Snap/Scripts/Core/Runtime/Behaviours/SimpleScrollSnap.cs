@@ -32,7 +32,7 @@ namespace DanielLochner.Assets.SimpleScrollSnap
         [SerializeField] private float minimumSwipeSpeed = 0f;
         [SerializeField] private Button previousButton = null;
         [SerializeField] private Button nextButton = null;
-        [SerializeField] private ToggleGroup pagination = null;
+        // [SerializeField] private ToggleGroup pagination = null;
         [SerializeField] private bool useToggleNavigation = true;
 
         // Snap Settings
@@ -132,11 +132,11 @@ namespace DanielLochner.Assets.SimpleScrollSnap
             get => nextButton;
             set => nextButton = value;
         }
-        public ToggleGroup Pagination
-        {
-            get => pagination;
-            set => pagination = value;
-        }
+        // public ToggleGroup Pagination
+        // {
+        //     get => pagination;
+        //     set => pagination = value;
+        // }
         public bool ToggleNavigation
         {
             get => useToggleNavigation;
@@ -220,16 +220,16 @@ namespace DanielLochner.Assets.SimpleScrollSnap
             get
             {
                 bool valid = true;
-
-                if (pagination != null)
-                {
-                    int numberOfToggles = pagination.transform.childCount;
-                    if (numberOfToggles != NumberOfPanels)
-                    {
-                        Debug.LogError("<b>[SimpleScrollSnap]</b> The number of Toggles should be equivalent to the number of Panels. There are currently " + numberOfToggles + " Toggles and " + NumberOfPanels + " Panels. If you are adding Panels dynamically during runtime, please update your pagination to reflect the number of Panels you will have before adding.", gameObject);
-                        valid = false;
-                    }
-                }
+                //
+                // if (pagination != null)
+                // {
+                //     int numberOfToggles = pagination.transform.childCount;
+                //     if (numberOfToggles != NumberOfPanels)
+                //     {
+                //         Debug.LogError("<b>[SimpleScrollSnap]</b> The number of Toggles should be equivalent to the number of Panels. There are currently " + numberOfToggles + " Toggles and " + NumberOfPanels + " Panels. If you are adding Panels dynamically during runtime, please update your pagination to reflect the number of Panels you will have before adding.", gameObject);
+                //         valid = false;
+                //     }
+                // }
                 if (snapSpeed < 0)
                 {
                     Debug.LogError("<b>[SimpleScrollSnap]</b> Snapping speed cannot be negative.", gameObject);
@@ -425,23 +425,23 @@ namespace DanielLochner.Assets.SimpleScrollSnap
                 nextButton.onClick.AddListenerOnce(GoToNextPanel);
             }
 
-            // Pagination
-            if (pagination != null && NumberOfPanels != 0)
-            {
-                Toggles = pagination.GetComponentsInChildren<Toggle>();
-                Toggles[startingPanel].SetIsOnWithoutNotify(true);
-                for (int i = 0; i < Toggles.Length; i++)
-                {
-                    int panelNumber = i;
-                    Toggles[i].onValueChanged.AddListenerOnce(delegate (bool isOn)
-                    {
-                        if (isOn && useToggleNavigation)
-                        {
-                            GoToPanel(panelNumber);
-                        }
-                    });
-                }
-            }
+            // // Pagination
+            // if (pagination != null && NumberOfPanels != 0)
+            // {
+            //     Toggles = pagination.GetComponentsInChildren<Toggle>();
+            //     Toggles[startingPanel].SetIsOnWithoutNotify(true);
+            //     for (int i = 0; i < Toggles.Length; i++)
+            //     {
+            //         int panelNumber = i;
+            //         Toggles[i].onValueChanged.AddListenerOnce(delegate (bool isOn)
+            //         {
+            //             if (isOn && useToggleNavigation)
+            //             {
+            //                 GoToPanel(panelNumber);
+            //             }
+            //         });
+            //     }
+            // }
         }
 
         private void HandleSelectingAndSnapping()
@@ -612,10 +612,10 @@ namespace DanielLochner.Assets.SimpleScrollSnap
             isSelected = true;
             onPanelSelected.Invoke(SelectedPanel);
 
-            if (pagination != null)
-            {
-                Toggles[panelNumber].isOn = true;
-            }
+            // if (pagination != null)
+            // {
+            //     Toggles[panelNumber].isOn = true;
+            // }
             if (useHardSnapping)
             {
                 ScrollRect.inertia = false;

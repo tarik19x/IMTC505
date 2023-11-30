@@ -28,9 +28,9 @@ namespace DanielLochner.Assets.SimpleScrollSnap
         public void Add(int index)
         {
             // Pagination
-            Toggle toggle = Instantiate(togglePrefab, scrollSnap.Pagination.transform.position + new Vector3(toggleWidth * (scrollSnap.NumberOfPanels + 1), 0, 0), Quaternion.identity, scrollSnap.Pagination.transform);
-            toggle.group = toggleGroup;
-            scrollSnap.Pagination.transform.position -= new Vector3(toggleWidth / 2f, 0, 0);
+            // Toggle toggle = Instantiate(togglePrefab, scrollSnap.Pagination.transform.position + new Vector3(toggleWidth * (scrollSnap.NumberOfPanels + 1), 0, 0), Quaternion.identity, scrollSnap.Pagination.transform);
+            // toggle.group = toggleGroup;
+            // scrollSnap.Pagination.transform.position -= new Vector3(toggleWidth / 2f, 0, 0);
 
             // Panel
             panelPrefab.GetComponent<Image>().color = new Color(UnityEngine.Random.Range(0f, 1f), UnityEngine.Random.Range(0f, 1f), UnityEngine.Random.Range(0f, 1f));
@@ -51,15 +51,15 @@ namespace DanielLochner.Assets.SimpleScrollSnap
 
         public void Remove(int index)
         {
-            if (scrollSnap.NumberOfPanels > 0)
-            {
-                // Pagination
-                DestroyImmediate(scrollSnap.Pagination.transform.GetChild(scrollSnap.NumberOfPanels - 1).gameObject);
-                scrollSnap.Pagination.transform.position += new Vector3(toggleWidth / 2f, 0, 0);
-
-                // Panel
-                scrollSnap.Remove(index);
-            }
+            // if (scrollSnap.NumberOfPanels > 0)
+            // {
+            //     // Pagination
+            //     DestroyImmediate(scrollSnap.Pagination.transform.GetChild(scrollSnap.NumberOfPanels - 1).gameObject);
+            //     scrollSnap.Pagination.transform.position += new Vector3(toggleWidth / 2f, 0, 0);
+            //
+            //     // Panel
+            //     scrollSnap.Remove(index);
+            // }
         }
         public void RemoveAtIndex()
         {
