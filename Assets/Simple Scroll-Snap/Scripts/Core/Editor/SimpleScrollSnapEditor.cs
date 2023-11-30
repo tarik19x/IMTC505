@@ -173,17 +173,17 @@ namespace DanielLochner.Assets.SimpleScrollSnap
         private void ShowPagination()
         {
             EditorGUILayout.ObjectField(pagination, typeof(ToggleGroup), new GUIContent("Pagination", "(Optional) ToggleGroup containing Toggles that shows the current position of the user and can be used to transition to a selected panel."));
-            if (scrollSnap.Pagination != null)
-            {
-                EditorGUI.indentLevel++;
-                EditorGUILayout.PropertyField(useToggleNavigation, new GUIContent("Toggle Navigation", "Should users be able to transition to panels by clicking on their respective toggle."));
-                int numberOfToggles = scrollSnap.Pagination.transform.childCount;
-                if (numberOfToggles != scrollSnap.NumberOfPanels)
-                {
-                    EditorGUILayout.HelpBox("The number of toggles should be equivalent to the number of panels. There are currently " + numberOfToggles + " toggles and " + scrollSnap.NumberOfPanels + " panels.", MessageType.Warning);
-                }
-                EditorGUI.indentLevel--;
-            }
+            // if (scrollSnap.Pagination != null)
+            // {
+            //     EditorGUI.indentLevel++;
+            //     EditorGUILayout.PropertyField(useToggleNavigation, new GUIContent("Toggle Navigation", "Should users be able to transition to panels by clicking on their respective toggle."));
+            //     int numberOfToggles = scrollSnap.Pagination.transform.childCount;
+            //     if (numberOfToggles != scrollSnap.NumberOfPanels)
+            //     {
+            //         EditorGUILayout.HelpBox("The number of toggles should be equivalent to the number of panels. There are currently " + numberOfToggles + " toggles and " + scrollSnap.NumberOfPanels + " panels.", MessageType.Warning);
+            //     }
+            //     EditorGUI.indentLevel--;
+            // }
         }
 
         private void ShowSnapSettings()
