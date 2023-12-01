@@ -19,14 +19,11 @@ MonoBehaviour:
     type: 3}
   stateChanged: 0
   placables:
-  - identifier: Okanagan Lake
-    prefab: {fileID: 2671575864547158182, guid: 4050deaa11cbf9245953ba19254e2c6a,
-      type: 3}
   - identifier: 3D Animated Box
     prefab: {fileID: 3732884140816335134, guid: b9c23760161b7cc459510c2cf914d719,
       type: 3}
   - identifier: Coverflow
-    prefab: {fileID: 4887613191576630858, guid: 3110124597785b94e8090a5e2d29cf8e,
+    prefab: {fileID: 4834603233458670909, guid: afa76caab4ecba14eb2b3afeaed32a59,
       type: 3}
   - identifier: Animated Arrow
     prefab: {fileID: 7747670578238309511, guid: 947e1c02f1be4e8489d8797a58f3e60f,
