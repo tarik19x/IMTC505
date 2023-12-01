@@ -28,3 +28,6 @@ MonoBehaviour:
   - identifier: Coverflow
     prefab: {fileID: 4887613191576630858, guid: 3110124597785b94e8090a5e2d29cf8e,
       type: 3}
+  - identifier: Animated Arrow
+    prefab: {fileID: 7747670578238309511, guid: 947e1c02f1be4e8489d8797a58f3e60f,
+      type: 3}
