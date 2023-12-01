@@ -5241,7 +5241,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96ba78d7f53386540ac4b653914bdd06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  holdDuration: 2
+  holdDuration: 4
   _anim: {fileID: 3889844700767482485}
 --- !u!114 &276832166648518060
 MonoBehaviour:

@@ -172,7 +172,7 @@ namespace DanielLochner.Assets.SimpleScrollSnap
         }
         private void ShowPagination()
         {
-            EditorGUILayout.ObjectField(pagination, typeof(ToggleGroup), new GUIContent("Pagination", "(Optional) ToggleGroup containing Toggles that shows the current position of the user and can be used to transition to a selected panel."));
+            //EditorGUILayout.ObjectField(pagination, typeof(ToggleGroup), new GUIContent("Pagination", "(Optional) ToggleGroup containing Toggles that shows the current position of the user and can be used to transition to a selected panel."));
             // if (scrollSnap.Pagination != null)
             // {
             //     EditorGUI.indentLevel++;
