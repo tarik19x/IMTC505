@@ -4,8 +4,13 @@ using UnityEngine;
 
 public class TouchControl : MonoBehaviour
 {
-    public float holdDuration = 4f; // Adjust the duration as needed
+    public float holdDuration = 1f; // Adjust the duration as needed
     public Animator _anim;
+    private float touchStartTime;
+    public GiftBoxController gf;
+    public ToggleVisibility tv;
+    public GameObject QuestionMenu;
+
     private void Update()
     {
         // Check for touch input
@@ -19,14 +24,25 @@ public class TouchControl : MonoBehaviour
                     // Check if the touch began on the object
                     if (IsTouchingObject(touch.position))
                     {
-                        // Call the function when the touch begins
-                        OnTouchAndHoldStart();
+                        // Store the start time of the touch
+                        touchStartTime = Time.time;
                     }
                     break;
 
                 case TouchPhase.Ended:
-                    // Call the function when the touch ends
-                    OnTouchAndHoldEnd();
+                    // Check if the touch duration is exactly holdDuration
+                    if (Time.time - touchStartTime >= holdDuration)
+                    {
+                        // Call the function when the touch ends and the duration is 4f
+                        OnTouchAndHoldStart();
+                        Debug.Log("clicked");
+                        gf.HandleClick();
+                        tv.ToggleImageVisibility(QuestionMenu);
+                        OnTouchAndHoldEnd();
+                    }
+
+                    // Call the function when the touch ends regardless of duration
+                    
                     break;
             }
         }
@@ -54,6 +70,5 @@ public class TouchControl : MonoBehaviour
     private void OnTouchAndHoldEnd()
     {
         _anim.SetTrigger("Pickup");
-
     }
 }
