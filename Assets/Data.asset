@@ -19,8 +19,8 @@ MonoBehaviour:
     type: 3}
   stateChanged: 0
   placables:
-  - identifier: 3D Animated Box
-    prefab: {fileID: 3732884140816335134, guid: b9c23760161b7cc459510c2cf914d719,
+  - identifier: 3D Animated Box 5
+    prefab: {fileID: 5347006220399019959, guid: d3178bcea2dbf2044907b10f0898f9f0,
       type: 3}
   - identifier: Coverflow
     prefab: {fileID: 4834603233458670909, guid: afa76caab4ecba14eb2b3afeaed32a59,
