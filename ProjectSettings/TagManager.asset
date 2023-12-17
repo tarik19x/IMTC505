@@ -8,6 +8,11 @@ TagManager:
   - CA
   - WA
   - giftbox
+  - GiftBox_UBCO
+  - GiftBox_Kelowna
+  - GiftBox_Indi
+  - GiftBox_Lake
+  - GiftBox_Wild
   layers:
   - Default
   - TransparentFX
