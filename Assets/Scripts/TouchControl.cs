@@ -11,6 +11,9 @@ public class TouchControl : MonoBehaviour
     public GameObject QuestionMenu;
     public InteractionTrigger interactionTrigger;
 
+
+    public string checkTag;
+
     private void Update()
     {
         // Check if there are exactly two touches
@@ -24,10 +27,10 @@ public class TouchControl : MonoBehaviour
             Ray ray1 = Camera.main.ScreenPointToRay(touch1.position);
             Ray ray2 = Camera.main.ScreenPointToRay(touch2.position);
 
-            // Check if both touches are over the "giftbox" object
+            // Check if both touches are over tyhe "giftbox" object
             RaycastHit hit1, hit2;
-            bool isTouchingGiftbox1 = Physics.Raycast(ray1, out hit1) && hit1.transform.CompareTag("giftbox");
-            bool isTouchingGiftbox2 = Physics.Raycast(ray2, out hit2) && hit2.transform.CompareTag("giftbox");
+            bool isTouchingGiftbox1 = Physics.Raycast(ray1, out hit1) && hit1.transform.CompareTag(checkTag);
+            bool isTouchingGiftbox2 = Physics.Raycast(ray2, out hit2) && hit2.transform.CompareTag(checkTag);
 
             if (isTouchingGiftbox1 && isTouchingGiftbox2)
             {
