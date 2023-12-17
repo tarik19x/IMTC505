@@ -1,59 +1,49 @@
 using System.Collections;
 using System.Collections.Generic;
+using Gamekit3D;
 using UnityEngine;
 
 public class TouchControl : MonoBehaviour
 {
-    public float holdDuration = 4f; // Adjust the duration as needed
+    private bool isTouching = false;
     public Animator _anim;
+    public ToggleVisibility tv;
+    public GameObject QuestionMenu;
+    public InteractionTrigger interactionTrigger;
+
     private void Update()
     {
-        // Check for touch input
-        if (Input.touchCount > 0)
+        // Check if there are exactly two touches
+        if (Input.touchCount == 2)
         {
-            Touch touch = Input.GetTouch(0);
+            // Get both touches
+            Touch touch1 = Input.GetTouch(0);
+            Touch touch2 = Input.GetTouch(1);
 
-            switch (touch.phase)
+            // Perform raycasting from both touch positions
+            Ray ray1 = Camera.main.ScreenPointToRay(touch1.position);
+            Ray ray2 = Camera.main.ScreenPointToRay(touch2.position);
+
+            // Check if both touches are over the "giftbox" object
+            RaycastHit hit1, hit2;
+            bool isTouchingGiftbox1 = Physics.Raycast(ray1, out hit1) && hit1.transform.CompareTag("giftbox");
+            bool isTouchingGiftbox2 = Physics.Raycast(ray2, out hit2) && hit2.transform.CompareTag("giftbox");
+
+            if (isTouchingGiftbox1 && isTouchingGiftbox2)
             {
-                case TouchPhase.Began:
-                    // Check if the touch began on the object
-                    if (IsTouchingObject(touch.position))
-                    {
-                        // Call the function when the touch begins
-                        OnTouchAndHoldStart();
-                    }
-                    break;
-
-                case TouchPhase.Ended:
-                    // Call the function when the touch ends
-                    OnTouchAndHoldEnd();
-                    break;
+                // Call your custom function when there is a two-finger touch on the "giftbox"
+                OnTwoFingerTouch();
             }
         }
     }
 
-    private bool IsTouchingObject(Vector2 touchPosition)
+    private void OnTwoFingerTouch()
     {
-        // Cast a ray from the touch position to see if it hits the object
-        Ray ray = Camera.main.ScreenPointToRay(touchPosition);
-        RaycastHit hit;
-
-        if (Physics.Raycast(ray, out hit))
-        {
-            return hit.collider.gameObject == gameObject;
-        }
-
-        return false;
-    }
-
-    private void OnTouchAndHoldStart()
-    {
+        tv.ToggleImageVisibility(QuestionMenu);
+        // Implement your logic for two-finger touch
         _anim.SetTrigger("Open");
-    }
-
-    private void OnTouchAndHoldEnd()
-    {
+        interactionTrigger.enabled = true;
+        
         _anim.SetTrigger("Pickup");
-
     }
 }
