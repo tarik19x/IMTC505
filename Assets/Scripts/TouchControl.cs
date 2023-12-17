@@ -6,62 +6,44 @@ using UnityEngine;
 public class TouchControl : MonoBehaviour
 {
     private bool isTouching = false;
-    public float holdDuration = 2f; // Adjust the duration as needed
     public Animator _anim;
-    private float touchStartTime;
     public ToggleVisibility tv;
     public GameObject QuestionMenu;
     public InteractionTrigger interactionTrigger;
 
     private void Update()
     {
-        if (Input.touchCount > 0)
+        // Check if there are exactly two touches
+        if (Input.touchCount == 2)
         {
-            // Get the first touch
-            Touch touch = Input.GetTouch(0);
+            // Get both touches
+            Touch touch1 = Input.GetTouch(0);
+            Touch touch2 = Input.GetTouch(1);
 
-            // Perform raycasting from the touch position
-            Ray ray = Camera.main.ScreenPointToRay(touch.position);
-            RaycastHit hit;
+            // Perform raycasting from both touch positions
+            Ray ray1 = Camera.main.ScreenPointToRay(touch1.position);
+            Ray ray2 = Camera.main.ScreenPointToRay(touch2.position);
 
-            switch (touch.phase)
+            // Check if both touches are over the "giftbox" object
+            RaycastHit hit1, hit2;
+            bool isTouchingGiftbox1 = Physics.Raycast(ray1, out hit1) && hit1.transform.CompareTag("giftbox");
+            bool isTouchingGiftbox2 = Physics.Raycast(ray2, out hit2) && hit2.transform.CompareTag("giftbox");
+
+            if (isTouchingGiftbox1 && isTouchingGiftbox2)
             {
-                case TouchPhase.Began:
-                    // Record touch start time
-                    isTouching = true;
-                    touchStartTime = Time.time;
-                    break;
-
-                case TouchPhase.Moved:
-                    // Check if the touch is still within the same object
-                    if (isTouching && Physics.Raycast(ray, out hit) && hit.transform.CompareTag("giftbox"))
-                    {
-                        // Check if touch has been held for at least 2 seconds
-                        if (Time.time - touchStartTime >= 2f)
-                        {
-                            // Call your custom function when a "giftbox" is touched and held for 2 seconds
-                            OnTouchAndHoldStart();
-                        }
-                    }
-                    break;
-
-                case TouchPhase.Ended:
-                    // Reset touch state
-                    isTouching = false;
-                    break;
+                // Call your custom function when there is a two-finger touch on the "giftbox"
+                OnTwoFingerTouch();
             }
         }
     }
 
-
-    private void OnTouchAndHoldStart()
+    private void OnTwoFingerTouch()
     {
+        tv.ToggleImageVisibility(QuestionMenu);
+        // Implement your logic for two-finger touch
         _anim.SetTrigger("Open");
         interactionTrigger.enabled = true;
-        tv.ToggleImageVisibility(QuestionMenu);
+        
         _anim.SetTrigger("Pickup");
-
-
     }
-    
 }

@@ -19,11 +19,36 @@ MonoBehaviour:
     type: 3}
   stateChanged: 0
   placables:
-  - identifier: 3D Animated Box 5
-    prefab: {fileID: 5347006220399019959, guid: d3178bcea2dbf2044907b10f0898f9f0,
+  - identifier: 3D Animated Box v2 1
+    prefab: {fileID: 4637077219650515786, guid: e5930344d5639534b8e5bc54c24ec501,
       type: 3}
-  - identifier: Coverflow
-    prefab: {fileID: 4834603233458670909, guid: afa76caab4ecba14eb2b3afeaed32a59,
+  - identifier: Coverflow_UBCO
+    prefab: {fileID: 4606243350616847854, guid: 557f740425f5ee1409fa69496b96283c,
+      type: 3}
+  - identifier: Coverflow_Kelowna
+    prefab: {fileID: 3899964511926367297, guid: 6b20f71924442cc408af8bbc2a6226d3,
+      type: 3}
+  - identifier: Coverflow_Wildfire
+    prefab: {fileID: 8307582190827347868, guid: dd0a0cc71f908ca4b92ba92a5e64fe0c,
+      type: 3}
+  - identifier: Coverflow_Indi
+    prefab: {fileID: 9000760337218779097, guid: 4791b57dc1ea6cb458d72aec4d816eac,
+      type: 3}
+  - identifier: Coverflow_Lake
+    prefab: {fileID: 92778725618180846, guid: 716ce41647ffd4c4bad1998faffe8687, type: 3}
+  - identifier: Giftbox_Kelowna
+    prefab: {fileID: 6391686965682784887, guid: 58c07b08e056a094b81d6d48ff66ef72,
+      type: 3}
+  - identifier: Giftbox_UBCO
+    prefab: {fileID: 298926281073056705, guid: 8b44d867c50c48d4ebe883a4158ef25d, type: 3}
+  - identifier: Giftbox_Wildfire
+    prefab: {fileID: 2058263661918331947, guid: 46af4d0f767b9034582a7cde23ebc8d3,
+      type: 3}
+  - identifier: Giftbox_Indi
+    prefab: {fileID: 6722849924967580362, guid: 7aa912eafa8c3ef45a0a3cf31e4faa21,
+      type: 3}
+  - identifier: Giftbox_Lake
+    prefab: {fileID: 3986721959327420336, guid: 327e4d6485d4b4d4a8d7ad732208dcbe,
       type: 3}
   - identifier: Animated Arrow
     prefab: {fileID: 7747670578238309511, guid: 947e1c02f1be4e8489d8797a58f3e60f,
