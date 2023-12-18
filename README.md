@@ -37,7 +37,7 @@ In "A Walk Through Time," user interaction is designed to facilitate a historica
 In our app, users embark on a historical journey through different time periods. We've highlighted five main points: 1) UBCO History, 2) City of Kelowna History, 3) Kelowna Wildfire History, 4) Indigenous People's History, and 5) Okanagan Lake History. 
 
 1. **Interacting with the Coverflow for Historical Information:**
-   - In the Coverflow, we've incorporated five images representing different time periods related to historical milestones. For instance, in UBCO History, five images span from the campus's 2004 planning to the 2020 future plans for the downtown campus. Users can swipe left or right to explore these images, and pressing the "Explore" button beneath each image provides additional detailed information about that specific time point.
+   - In the Coverflow, we've incorporated five images representing different time periods related to historical milestones for each of the five points in our application. For instance, in UBCO History, five images span from the campus's 2004 planning to the 2020 future plans for the downtown campus. Users can swipe left or right to explore these images, and pressing the "Explore" button next to each image provides additional detailed information about that specific time point.
 
 2. **Accessing Gift Boxes with Questions:**
    - After exploring any of the five historical points, users encounter visual cues guiding them to different gift boxes. A two-finger press on the gift box triggers a 3D animation, revealing a question box. Users answer questions based on the gathered information, with multiple attempts allowed. Correct answers earn users points, adding a gamified and interactive element to the application.
