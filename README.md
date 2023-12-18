@@ -6,7 +6,7 @@ Welcome to "A Walk Through Time" - an immersive experience project developed by 
 
 ## 1. Working Application and Source Code
 
-### 1.1 Acquisition of Models (2 points)
+### 1.1 Acquisition of Models:
 
 Our app is designed to be visually engaging, and we achieved this by incorporating various 3D models. This section provides details on where and how we got these models, aiming to be transparent about our sources and methods. In developing "A Walk Through Time," we carefully selected and modified several 3D models to enhance the app's aesthetic and feel, making it more enjoyable for users.
 
@@ -32,7 +32,19 @@ Our app is designed to be visually engaging, and we achieved this by incorporati
 
 #### 1.2.1 User Interactions (a)
 
-The documentation outlines how users interact with the application, describing the user interface and providing a step-by-step guide on navigating through the different features. This section ensures that users can seamlessly engage with the application.
+In "A Walk Through Time," user interaction is designed to facilitate a historical journey through different time periods. The documentation provides a step-by-step guide on navigating the application, ensuring users can seamlessly engage with its features. Here are three key user interactions within the application:
+
+In our app, users embark on a historical journey through different time periods. We've highlighted five main points: 1) UBCO History, 2) City of Kelowna History, 3) Kelowna Wildfire History, 4) Indigenous People's History, and 5) Okanagan Lake History. 
+
+1. **Interacting with the Coverflow for Historical Information:**
+   - In the Coverflow, we've incorporated five images representing different time periods related to historical milestones. For instance, in UBCO History, five images span from the campus's 2004 planning to the 2020 future plans for the downtown campus. Users can swipe left or right to explore these images, and pressing the "Explore" button beneath each image provides additional detailed information about that specific time point.
+
+2. **Accessing Gift Boxes with Questions:**
+   - After exploring any of the five historical points, users encounter visual cues guiding them to different gift boxes. A two-finger press on the gift box triggers a 3D animation, revealing a question box. Users answer questions based on the gathered information, with multiple attempts allowed. Correct answers earn users points, adding a gamified and interactive element to the application.
+
+3. **Visual Cues for User Guidance:**
+   - To enhance user navigation and accessibility, visual cues such as 3D animated arrows are strategically placed throughout the courtyard. These cues guide users to the five different points in our project, ensuring a seamless and user-friendly experience while exploring the historical locations.
+
 
 #### 1.2.2 Code Descriptions (b)
 
