@@ -100,6 +100,9 @@ private void OnTwoFingerTouch()
 
 2. **Simple Scroll-Snap Script:**
    - Purpose: The Simple Scroll-Snap script takes charge of controlling the Coverflow feature. It enables users to seamlessly navigate through historical images by swiping, interact with buttons, and view additional information through the canvas associated with each image.
+![SimpleScrollSnap](https://res.cloudinary.com/dolt8nnzc/image/upload/v1702872797/scroll_egbvbj.png)
+
+**SimpleScrollSnap** script provides a straightforward scroll-snapping functionality for Unity UI elements. It includes features such as automatic layout, infinite scrolling, and transition effects. The script, authored by Daniel Lochner, ensures proper movement and layout customization, supporting horizontal and vertical scrolling. It is compatible with Unity's UI system and requires a ScrollRect component. The code structure consists of field declarations, methods for initialization and runtime updates, and configurable properties for movement, layout, and snapping behavior.
 
 3. **GiftBoxController Script:**
    - Purpose: This script is responsible for managing the GiftBox, controlling its animations, and handling the user interface related to questions. It ensures the smooth interaction and engagement of users with the gamified elements in the application.
