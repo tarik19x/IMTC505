@@ -186,12 +186,13 @@ These scripts collectively form the backbone of our application, enabling a seam
 ### 1.3 APK File of the Application (2 points)
 
 An installable APK file of the working version of the application is provided in this section. Users can download and install the application on their Android devices, allowing them to experience "A Walk Through Time" firsthand.
-**APK Link:** [Link Text](https://ubcca-my.sharepoint.com/:u:/g/personal/tarik19_student_ubc_ca/EQabpuXd85FIoD7vMQuTMOwBR4OO8OYgUgwhZawl0gfQCQ?e=3Qc21I)
+**APK Link:** [UBC OneDrive Link](https://ubcca-my.sharepoint.com/:u:/g/personal/tarik19_student_ubc_ca/EQabpuXd85FIoD7vMQuTMOwBR4OO8OYgUgwhZawl0gfQCQ?e=3Qc21I)
 
 
 ### 1.4 Source Code (3 points)
 
-The source code for the project is included in this section. Developers can explore the codebase to gain a deeper understanding of the project's architecture, logic, and implementation. The source code is organized and well-documented, facilitating collaboration and further development.
+The source code for the project is included in this section.
+**Source Code Link:** [GitHub Repository](https://github.com/tarik19x/IMTC505)
 
 ---
 
