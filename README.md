@@ -51,14 +51,58 @@ In our app, users embark on a historical journey through different time periods.
 
 In the development of "A Walk Through Time," we've implemented five essential scripts to orchestrate various functionalities within the application:
 
-1. **GiftBoxController Script:**
-   - Purpose: This script is responsible for managing the GiftBox, controlling its animations, and handling the user interface related to questions. It ensures the smooth interaction and engagement of users with the gamified elements in the application.
+1. **TouchControl Script:**
+   - Purpose: The TouchControl script controls the interactions associated with the gift box and its animations. It provides the necessary functionality to enhance user engagement when interacting with the 3D animated GiftBox, adding a tactile and responsive feel to the user experience.This script facilitates the interactive opening of a giftbox in a Unity project. It responds to a two-finger touch, triggering an animation and displaying a question menu associated with the giftbox.
+
+#### Code Overview
+
+```csharp
+private void Update()
+{
+    // Check for two simultaneous touches
+    if (Input.touchCount == 2)
+    {
+        Touch touch1 = Input.GetTouch(0);
+        Touch touch2 = Input.GetTouch(1);
+        
+        // Cast rays from the touches to detect objects
+        Ray ray1 = Camera.main.ScreenPointToRay(touch1.position);
+        Ray ray2 = Camera.main.ScreenPointToRay(touch2.position);
+        
+        RaycastHit hit1, hit2;
+        // Check if both touches hit objects with the specified tag
+        bool isTouchingGiftbox1 = Physics.Raycast(ray1, out hit1) && hit1.transform.CompareTag(checkTag);
+        bool isTouchingGiftbox2 = Physics.Raycast(ray2, out hit2) && hit2.transform.CompareTag(checkTag);
+
+        // If both touches hit giftboxes, trigger the two-finger touch event
+        if (isTouchingGiftbox1 && isTouchingGiftbox2)
+        {
+            OnTwoFingerTouch();
+        }
+    }
+}
+
+private void OnTwoFingerTouch()
+{
+    // Toggle the visibility of the question menu
+    tv.ToggleImageVisibility(QuestionMenu);
+    
+    // Trigger the "Open" animation
+    _anim.SetTrigger("Open");
+    
+    // Enable the interaction trigger
+    interactionTrigger.enabled = true;
+    
+    // Trigger the "Pickup" animation
+    _anim.SetTrigger("Pickup");
+}
+```
 
 2. **Simple Scroll-Snap Script:**
    - Purpose: The Simple Scroll-Snap script takes charge of controlling the Coverflow feature. It enables users to seamlessly navigate through historical images by swiping, interact with buttons, and view additional information through the canvas associated with each image.
 
-3. **TouchControl Script:**
-   - Purpose: The TouchControl script governs the interactions associated with the gift box and its animations. It provides the necessary functionality to enhance user engagement when interacting with the 3D animated GiftBox, adding a tactile and responsive feel to the user experience.
+3. **GiftBoxController Script:**
+   - Purpose: This script is responsible for managing the GiftBox, controlling its animations, and handling the user interface related to questions. It ensures the smooth interaction and engagement of users with the gamified elements in the application.
 
 4. **ToggleVisibility Script:**
    - Purpose: The ToggleVisibility script plays a crucial role in managing the visibility of different GameObjects within the Unity scene. This script ensures that specific elements are displayed or hidden based on the application's context, contributing to a clean and organized user interface.
