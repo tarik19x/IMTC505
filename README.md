@@ -183,15 +183,17 @@ public void whenExitClicked()
 These scripts collectively form the backbone of our application, enabling a seamless and engaging user experience while ensuring the smooth functioning of various interactive elements.
 
 
-### 1.3 APK File of the Application (2 points)
+### 1.3 APK File of the Application
 
 An installable APK file of the working version of the application is provided in this section. Users can download and install the application on their Android devices, allowing them to experience "A Walk Through Time" firsthand.
+
 **APK Link:** [UBC OneDrive Link](https://ubcca-my.sharepoint.com/:u:/g/personal/tarik19_student_ubc_ca/EQabpuXd85FIoD7vMQuTMOwBR4OO8OYgUgwhZawl0gfQCQ?e=3Qc21I)
 
 
-### 1.4 Source Code (3 points)
+### 1.4 Source Code
 
 The source code for the project is included in this section.
+
 **Source Code Link:** [GitHub Repository](https://github.com/tarik19x/IMTC505)
 
 ---
