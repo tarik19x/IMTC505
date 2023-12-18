@@ -106,6 +106,46 @@ private void OnTwoFingerTouch()
 
 3. **GiftBoxController Script:**
    - Purpose: This script is responsible for managing the GiftBox, controlling its animations, and handling the user interface related to questions. It ensures the smooth interaction and engagement of users with the gamified elements in the application.
+   - The **GiftBoxController Script** manages the interaction and activation of a sequence of gift boxes in a Unity project. The `HandleClick` method is called when a gift box is clicked. It increments the click count, deactivates the current gift box after a short delay, and activates the next gift box in the sequence. The sequence is defined by a switch statement that determines which gift box to activate based on the click count. The script uses coroutines to introduce delays between the deactivation and activation of gift boxes, creating a sequential opening effect. Once all gift boxes are opened, a log message is displayed.
+```csharp
+public void HandleClick()
+{
+    clickCount++;
+    
+    Invoke("DeactivateCurrentGiftBox", 2f);
+    switch (clickCount)
+    {
+        case 1:
+            StartCoroutine(ActivateGiftBox(giftbox2, 3f));
+            break;
+        case 2:
+            StartCoroutine(ActivateGiftBox(giftbox3, 4f));
+            break;
+        default:
+            Debug.Log("All gift boxes opened!");
+            break;
+    }
+}
+
+private void DeactivateCurrentGiftBox()
+{
+    
+    if (clickCount == 1)
+    {
+        giftbox1.SetActive(false);
+    }
+    else if (clickCount == 2)
+    {
+        giftbox2.SetActive(false);
+    }
+}
+
+private IEnumerator ActivateGiftBox(GameObject giftbox, float delay)
+{
+    yield return new WaitForSeconds(delay);
+    giftbox.SetActive(true);
+}
+```
 
 4. **ToggleVisibility Script:**
    - Purpose: The ToggleVisibility script plays a crucial role in managing the visibility of different GameObjects within the Unity scene. This script ensures that specific elements are displayed or hidden based on the application's context, contributing to a clean and organized user interface.
