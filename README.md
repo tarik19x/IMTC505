@@ -152,6 +152,33 @@ private IEnumerator ActivateGiftBox(GameObject giftbox, float delay)
 
 5. **QuestBoxController Script:**
    - Purpose: The QuestBoxController script takes control of the quiz-related canvas, including questions, correct answer displays, and wrong answer displays. It manages the quiz interaction, allowing users to answer questions and providing feedback based on their responses, thereby enhancing the educational aspect of the application.
+   - The QuestBoxController Script is responsible for managing the quiz-related canvas within the application, handling aspects such as questions, correct answer displays, and wrong answer displays. Its primary purpose is to control the interaction flow of the quiz, allowing users to answer questions and providing feedback based on their responses to enhance the educational aspect of the application.
+
+The `whenExitClicked` function in the script is triggered when the exit button associated with the quiz box is clicked. This function increments the `numberOfExitClick` variable, which tracks the number of times the exit button has been clicked. Based on the value of `numberOfExitClick`, the function performs different actions to transition between different quiz box prefabs. Each case represents a stage of the transition, where one quiz box is deactivated, and the next one is activated. This sequential activation of different quiz box prefabs creates a progression through the quiz content.
+```csharp
+public void whenExitClicked()
+{
+    numberOfExitClick++;
+    switch (numberOfExitClick)
+    {
+        case 1:
+            questBoxPrefab.SetActive(false);
+            questBoxPrefab2.SetActive(true);
+            break;
+        case 2:
+            questBoxPrefab2.SetActive(false);
+            questBoxPrefab3.SetActive(true);
+            break;
+        case 3:
+            questBoxPrefab3.SetActive(false);
+            questBoxPrefab4.SetActive(true);
+            break;
+        default:
+            break;
+    }
+}
+```
+
 
 These scripts collectively form the backbone of our application, enabling a seamless and engaging user experience while ensuring the smooth functioning of various interactive elements.
 
