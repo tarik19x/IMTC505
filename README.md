@@ -4,11 +4,26 @@
 
 Welcome to "A Walk Through Time" - an immersive experience project developed by Group TBN for the IMTC 505 course. In this README file, you will find comprehensive information about the project, including the working application, source code, and other essential details.
 
-## 1. Working Application and Source Code (20 points)
+## 1. Working Application and Source Code
 
-### 1.1 Acquisition of Models (2 points)
+### 1.1 Acquisition of Models
 
-Our application incorporates various models to enhance the user experience. In the documentation, you will find detailed information on where and how these models were acquired. This section aims to provide transparency regarding the sources and methods used in obtaining the models.
+Our application incorporates various models to enhance the user experience. In the documentation, you will find detailed information on where and how these models were acquired. This section aims to provide transparency regarding the sources and methods used in obtaining the models. In the development of "A Walk Through Time," we integrated a total of 3 distinct models to enhance the visual and interactive aspects of the application. The following models were carefully selected and modified based on our project requirements:
+
+1. **Coverflow:**
+   - Model Source: [Simple Scroll-Snap](https://assetstore.unity.com/packages/tools/gui/simple-scroll-snap-140884) from Unity Asset Store.
+   - Description: We leveraged the "Simple Scroll-Snap" concept from Unity Asset Store and customized it to create a dynamic Coverflow. This Coverflow is used to display historical images in a seamless and immersive manner, enhancing the overall user experience.
+
+2. **3D Animated GiftBox:**
+   - Model Source: [3D Game Kit](https://assetstore.unity.com/packages/templates/tutorials/unity-learn-3d-game-kit-115747#content) from Unity Asset Store.
+   - Description: We integrated the 3D animated GiftBox from the "3D Game Kit" to introduce gamification elements into our project. The GiftBox model from the kit adds an engaging and interactive component, making the project more immersive for users.
+
+3. **3D Animated Arrow:**
+   - Model Source: [Sketchfab](https://sketchfab.com/3d-models/directional-arrow-1-9658f746810f4390bbcbc88275c40047).
+   - Description: To guide users through different locations and provide information, we incorporated a 3D Animated Arrow model from Sketchfab. This arrow serves as a visual indicator, directing users along the path they should follow for an enriched walkthrough experience.
+
+These models were chosen to create a compelling and educational journey for users, seamlessly blending historical content with interactive elements.
+
 
 ### 1.2 Implementations of Interactions (3 points)
 
