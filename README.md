@@ -33,6 +33,7 @@ Our app is designed to be visually engaging, and we achieved this by incorporati
 #### 1.2.1 User Interactions (a)
 
 In "A Walk Through Time," user interaction is designed to facilitate a historical journey through different time periods. The documentation provides a step-by-step guide on navigating the application, ensuring users can seamlessly engage with its features. Here are three key user interactions within the application:
+![Map of the courtyard with 5 points.](https://res.cloudinary.com/dolt8nnzc/image/upload/v1702870917/Picture1_p9ijyi.png)
 
 In our app, users embark on a historical journey through different time periods. We've highlighted five main points: 1) UBCO History, 2) City of Kelowna History, 3) Kelowna Wildfire History, 4) Indigenous People's History, and 5) Okanagan Lake History. 
 
