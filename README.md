@@ -198,11 +198,9 @@ The source code for the project is included in this section.
 
 ---
 
-## Getting Started
+## User Guide
 
-To run the application locally or explore the source code, follow the instructions below.
+To use our AR application, make sure you have an Android device that supports GeoSpatial Mode and ARcore. Position yourself within the UBCO Courtyard to access the functionalities. Open the app and update the current branch to `Updated005` using the `Modify` button, followed by `Sync` and `Merge with Branch` to synchronize with the most active branch.
 
-1. Clone the repository:
+Upon updating the branch, 3D game objects will automatically populate different locations. Your journey begins at the UBCO map monument in front of the Science Building, starting with `UBCO History`. Follow the visual cues leading you to each of the five key points. To interact with gift boxes, perform a `two-finger tap`, triggering a question box. Answer the questions correctly to accumulate points and enrich your exploration. Happy navigating!
 
-```bash
-git clone https://github.com/your-username/A-Walk-Through-Time.git
