@@ -49,7 +49,25 @@ In our app, users embark on a historical journey through different time periods.
 
 #### 1.2.2 Code Descriptions (b)
 
-Brief descriptions of the code itself are included to help developers understand the implementation details. Comments and annotations within the source code provide insights into the logic behind key functionalities. This ensures that the codebase is accessible and maintainable.
+In the development of "A Walk Through Time," we've implemented five essential scripts to orchestrate various functionalities within the application:
+
+1. **GiftBoxController Script:**
+   - Purpose: This script is responsible for managing the GiftBox, controlling its animations, and handling the user interface related to questions. It ensures the smooth interaction and engagement of users with the gamified elements in the application.
+
+2. **Simple Scroll-Snap Script:**
+   - Purpose: The Simple Scroll-Snap script takes charge of controlling the Coverflow feature. It enables users to seamlessly navigate through historical images by swiping, interact with buttons, and view additional information through the canvas associated with each image.
+
+3. **TouchControl Script:**
+   - Purpose: The TouchControl script governs the interactions associated with the gift box and its animations. It provides the necessary functionality to enhance user engagement when interacting with the 3D animated GiftBox, adding a tactile and responsive feel to the user experience.
+
+4. **ToggleVisibility Script:**
+   - Purpose: The ToggleVisibility script plays a crucial role in managing the visibility of different GameObjects within the Unity scene. This script ensures that specific elements are displayed or hidden based on the application's context, contributing to a clean and organized user interface.
+
+5. **QuestBoxController Script:**
+   - Purpose: The QuestBoxController script takes control of the quiz-related canvas, including questions, correct answer displays, and wrong answer displays. It manages the quiz interaction, allowing users to answer questions and providing feedback based on their responses, thereby enhancing the educational aspect of the application.
+
+These scripts collectively form the backbone of our application, enabling a seamless and engaging user experience while ensuring the smooth functioning of various interactive elements.
+
 
 ### 1.3 APK File of the Application (2 points)
 
